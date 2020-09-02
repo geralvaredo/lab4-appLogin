@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "lab4-appLogin"
+    }
+  },
+  "defaultProject": "lab4-appLogin",
+  "cli": {
+    "analytics": false
+  }
 }
