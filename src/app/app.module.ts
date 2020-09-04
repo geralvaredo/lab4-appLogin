@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.compone
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

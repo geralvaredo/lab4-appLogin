@@ -5,8 +5,8 @@ import { BienvenidoComponent } from './componentes/bienvenido/bienvenido.compone
 import {ErrorComponent} from './componentes/error/error.component';
 
 const routes: Routes = [
-  {path: '' , component : BienvenidoComponent},
-  {path: 'login' , component : LoginComponent},
+  {path: 'bienvenido' , component : BienvenidoComponent},
+  {path: '' , component : LoginComponent},
   {path: 'error', component : ErrorComponent}
 ];
 

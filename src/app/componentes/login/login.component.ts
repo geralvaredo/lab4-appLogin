@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {User} from '../../model/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,15 +9,29 @@ import {User} from '../../model/user';
 })
 export class LoginComponent implements OnInit {
 
-   private _user:User;
+    _user:User;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor( private router: Router) {
+    this._user = new User();
   }
 
-   onlogin(user: string,password: string){
-    this._user.verifyUser(user,password);
-   }
+  ngOnInit(): void {
 
+  }
+   public onLogin(){
+     let user:string;
+     let pass:string;
+     user = (document.getElementById('user') as HTMLInputElement).value;
+     pass = (document.getElementById('pass') as HTMLInputElement).value;
+    this.validateUserAndPassword(user,pass);
+  }
+
+  private validateUserAndPassword(user,pass){
+      if(user == 'admin' && pass == 'admin'){
+        this.router.navigate(['bienvenido']);
+      }
+      else{
+        this.router.navigate(['error']);
+      }
+  }
 }
